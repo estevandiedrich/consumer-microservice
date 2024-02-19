@@ -1,0 +1,21 @@
+spring:
+  rabbitmq:
+    host: localhost
+    password: guest
+    port: 15672
+    username: guest
+    exchange: user.exchange
+    queue: user.queue
+    routingkey: user.routingkey
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://172.17.0.2:5432/rabbit
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+server:
+  port: 8085
